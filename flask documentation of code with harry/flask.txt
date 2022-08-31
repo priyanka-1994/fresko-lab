@@ -1,0 +1,41 @@
+pip install virtualenv
+virtualenv env
+
+if u get error after triggering the cmnd virtualenv,then type
+Set-ExecutionPolicy unrestricted
+
+.\env\Scripts\activate.ps1
+pip install flask
+
+create a file-->app.py
+{
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+
+@app.route("/products")
+def products():
+    return "<p>This is products page.</p>"
+
+if __name__ == "__main__":
+    app.run(debug=True,port=8000)
+}
+
+run with -----> python app.py
+run by ctrl+click
+
+create folder static and template.
+create a file in static with name harry.txt and write down something and reload the chrome.
+
+for database,
+pip install flask-sqlalchemy
+
+pip install gunicorn
+pip freeze > requirements.txt
+heroku
+(set path in environmental variables)
+
