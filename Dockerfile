@@ -2,7 +2,7 @@ FROM python:3.8
 
 RUN pip3 install pipenv
 
-ENV PROJECT_DIR /usr/src
+ENV PROJECT_DIR /usr/src/todoapp
 
 WORKDIR ${PROJECT_DIR}
 
