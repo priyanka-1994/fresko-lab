@@ -2,13 +2,15 @@ FROM python:3.8
 
 RUN pip3 install pipenv
 
-ENV PROJECT_DIR /usr/src/todoapp
+ENV Fresko-pvt-ltd /usr/src/todoapp
 
-WORKDIR ${PROJECT_DIR}
+WORKDIR ${Fresko-pvt-ltd}
 
 COPY Procfile .
 
-#COPY Pipfile.lock .
+COPY todo.db .
+
+COPY requirements.txt .
 
 COPY . .
 
