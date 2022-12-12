@@ -1,5 +1,7 @@
 FROM python:3.8
 
+RUN pip install flask-sqlalchemy
+
 RUN pip3 install pipenv
 
 ENV Fresko-pvt-ltd /usr/src/todoapp
